@@ -1,0 +1,594 @@
+
+/* =========================
+   CONFIGURACIÓN
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            180deg,
+            #111111,
+            #332900,
+            #111111
+        );
+
+    color: white;
+
+    text-align: center;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   PANTALLA INICIAL
+========================= */
+
+.pantalla {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+.flores-principales {
+
+    font-size: 75px;
+
+    margin-bottom: 20px;
+
+    animation:
+        flotar 3s infinite ease-in-out;
+}
+
+
+.pantalla h1 {
+
+    font-size: 48px;
+
+    color: #ffd92f;
+
+    text-shadow:
+        0 0 10px #ffd92f,
+        0 0 30px #ffd92f;
+
+    margin-bottom: 20px;
+}
+
+
+.pantalla p {
+
+    font-size: 21px;
+
+    color: #fff4a8;
+
+    margin-bottom: 30px;
+}
+
+
+.indicacion {
+
+    margin-top: 20px;
+
+    color: #aaa;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+button {
+
+    border: none;
+
+    padding: 15px 30px;
+
+    border-radius: 30px;
+
+    background: #ffd92f;
+
+    color: #3c3000;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 15px #ffd92f;
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 35px #ffd92f;
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.oculto {
+
+    display: none;
+}
+
+
+#contenido {
+
+    animation:
+        aparecer 1s ease;
+}
+
+
+/* =========================
+   PRESENTACIÓN
+========================= */
+
+.presentacion {
+
+    min-height: 80vh;
+
+    padding:
+        80px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.presentacion h1 {
+
+    color: #ffd92f;
+
+    font-size: 42px;
+
+    margin: 25px 0;
+
+    text-shadow:
+        0 0 20px #ffd92f;
+}
+
+
+.presentacion p {
+
+    max-width: 700px;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    margin: 8px;
+}
+
+
+.flores {
+
+    font-size: 60px;
+
+    margin: 20px;
+
+    animation:
+        flotar 3s infinite ease-in-out;
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.seccion {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding:
+        70px 20px;
+}
+
+
+.seccion h2 {
+
+    color: #ffd92f;
+
+    font-size: 34px;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 15px #ffd92f;
+}
+
+
+.subtitulo {
+
+    color: #fff4ad;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   CARTA
+========================= */
+
+.carta {
+
+    max-width: 650px;
+
+    margin: 30px auto;
+
+    padding: 40px;
+
+    background: #fff9df;
+
+    color: #443600;
+
+    border-radius: 15px;
+
+    text-align: left;
+
+    box-shadow:
+        0 0 30px
+        rgba(255, 217, 47, 0.5);
+
+    transform:
+        rotate(-1deg);
+
+    transition: 0.4s;
+}
+
+
+.carta:hover {
+
+    transform:
+        rotate(0deg)
+        scale(1.02);
+}
+
+
+.carta h3 {
+
+    text-align: center;
+
+    color: #b98900;
+
+    margin-bottom: 20px;
+
+    font-size: 25px;
+}
+
+
+.carta p {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+
+.firma {
+
+    text-align: right !important;
+
+    color: #b98900;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   GALERÍA
+========================= */
+
+.galeria {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px, 1fr)
+        );
+
+    gap: 25px;
+
+    margin-top: 30px;
+}
+
+
+.foto {
+
+    background: #fff9df;
+
+    padding: 10px;
+
+    border-radius: 15px;
+
+    color: #443600;
+
+    box-shadow:
+        0 0 20px
+        rgba(255, 217, 47, 0.4);
+
+    transition: 0.4s;
+}
+
+
+.foto:hover {
+
+    transform:
+        translateY(-10px)
+        rotate(2deg);
+}
+
+
+.foto img {
+
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    display: block;
+}
+
+
+.foto p {
+
+    padding: 15px 5px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   MÚSICA
+========================= */
+
+.musica {
+
+    border-top:
+        1px solid
+        rgba(255, 217, 47, 0.3);
+
+    border-bottom:
+        1px solid
+        rgba(255, 217, 47, 0.3);
+}
+
+
+.musica p {
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+
+    min-height: 70vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 50px 20px;
+}
+
+
+.final h2 {
+
+    max-width: 700px;
+
+    color: #ffd92f;
+
+    font-size: 35px;
+
+    margin: 20px;
+}
+
+
+.final p {
+
+    font-size: 19px;
+
+    margin: 10px;
+}
+
+
+/* =========================
+   PÉTALOS
+========================= */
+
+.petalo {
+
+    position: fixed;
+
+    top: -50px;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    animation:
+        caer linear forwards;
+}
+
+
+@keyframes caer {
+
+    from {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    to {
+
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+
+    }
+}
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes flotar {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-15px);
+
+    }
+}
+
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .pantalla h1 {
+
+        font-size: 35px;
+
+    }
+
+
+    .flores-principales {
+
+        font-size: 50px;
+
+    }
+
+
+    .presentacion h1 {
+
+        font-size: 32px;
+
+    }
+
+
+    .seccion h2 {
+
+        font-size: 28px;
+
+    }
+
+
+    .carta {
+
+        padding: 25px;
+
+    }
+
+
+    .carta p {
+
+        font-size: 16px;
+
+    }
+
+
+    .foto img {
+
+        height: 300px;
+
+    }
+
+}
+
+
+         
